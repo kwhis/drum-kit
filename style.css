@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;900&display=swap');
+
 html {
   font-size: 10px;
   background: url('./background.jpg') bottom center;
@@ -7,20 +9,22 @@ html {
 body,html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family:'Poppins', Arial, sans-serif;
+  font-weight: 700;
 }
 
 .keys {
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
 .key {
-  border: .4rem solid black;
-  border-radius: .5rem;
+  border: .3rem solid white;
+  border-radius: 3rem;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
@@ -28,8 +32,8 @@ body,html {
   width: 10rem;
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 0 .5rem black;
+  background: rgba(0, 0, 0, 0.692);
+  text-shadow: 0 0 .5rem orangered;
 }
 
 .playing {
