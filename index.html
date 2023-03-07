@@ -60,7 +60,8 @@
 <script>
   window.addEventListener('keydown', function(e){
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-    console.log(audio);
+    if(!audio) return; //stop function from running if incorrect key is pressed
+    audio.play();
   });
 </script>
 </body>
