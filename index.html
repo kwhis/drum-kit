@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
+  <title>Drum Kit</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://fav.farm/🔥" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -59,9 +57,9 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
+  window.addEventListener('keydown', function(e){
+    console.log(e);
+  });
 </script>
-
-
 </body>
 </html>
