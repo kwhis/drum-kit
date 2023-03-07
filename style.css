@@ -53,3 +53,19 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+h1,
+h2 {
+  text-align: center;
+  margin: 0;
+ 
+  
+}
+
+h1 {
+  letter-spacing: .5rem;
+  font-size: 7rem;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 .7rem orangered;
+}
