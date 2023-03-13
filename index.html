@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Drum Kit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico" />
   </head>
   <body>
@@ -60,38 +60,40 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
     <script>
-      document.body.className = 'fade';
+      document.body.className = "fade";
 
       document.addEventListener("DOMContentLoaded", () => {
-        window.setTimeout(function() {
-        document.body.className = '';
+        window.setTimeout(function () {
+          document.body.className = "";
         }, 230);
       });
 
       document.addEventListener("DOMContentLoaded", () => {
-        window.setTimeout(function() {
-        document.body.classList.remove('fade');
+        window.setTimeout(function () {
+          document.body.classList.remove("fade");
         }, 230);
       });
 
       function playSound(e) {
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-        if(!audio) return; //stop function from running if incorrect key is pressed
+        if (!audio) return; //stop function from running if incorrect key is pressed
         audio.currentTime = 0; //rewinds audio to the start
         audio.play();
-        key.classList.add('playing');
-      };
-
-      function removeTransition(e) {
-        if(e.propertyName !== 'transform') return; //skip if it is not a transform, transform is longest transition
-        this.classList.remove('playing'); //this is equal to the key
+        key.classList.add("playing");
       }
 
-      const keys = document.querySelectorAll('.key');
-      keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+      function removeTransition(e) {
+        if (e.propertyName !== "transform") return; //skip if it is not a transform, transform is longest transition
+        this.classList.remove("playing"); //this is equal to the key
+      }
 
-      window.addEventListener('keydown', playSound);
+      const keys = document.querySelectorAll(".key");
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+
+      window.addEventListener("keydown", playSound);
     </script>
   </body>
 </html>
